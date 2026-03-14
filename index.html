@@ -62,7 +62,7 @@
       transform: scale(1.05);
     }
 
-    .cell.x {
+    .cell.poep {
       color: #e94560;
     }
 
@@ -118,7 +118,7 @@
   <h1>Tic Tac Toe</h1>
 
   <div id="score">
-    <div class="score-box score-x">X<span id="score-x">0</span></div>
+    <div class="score-box score-x">Poep<span id="score-x">0</span></div>
     <div class="score-box score-d">Draws<span id="score-d">0</span></div>
     <div class="score-box score-o">O<span id="score-o">0</span></div>
   </div>
@@ -150,9 +150,9 @@
 
     function init() {
       board = Array(9).fill('');
-      current = 'X';
+      current = 'Poep';
       gameOver = false;
-      if (!scores) scores = { X: 0, O: 0, D: 0 };
+      if (!scores) scores = { Poep: 0, O: 0, D: 0 };
       render();
     }
 
@@ -164,7 +164,7 @@
       });
       document.getElementById('status').textContent =
         gameOver ? '' : `Player ${current}'s turn`;
-      document.getElementById('score-x').textContent = scores.X;
+      document.getElementById('score-x').textContent = scores.Poep;
       document.getElementById('score-o').textContent = scores.O;
       document.getElementById('score-d').textContent = scores.D;
     }
@@ -202,7 +202,7 @@
         document.getElementById('status').textContent = "It's a draw!";
         render();
       } else {
-        current = current === 'X' ? 'O' : 'X';
+        current = current === 'Poep' ? 'O' : 'Poep';
       }
     }
 
