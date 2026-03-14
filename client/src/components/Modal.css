@@ -1,0 +1,51 @@
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.modal-header h3 { font-size: 1rem; font-weight: 700; }
+
+.modal-body { padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: .9rem; }
+
+.field { display: flex; flex-direction: column; }
+.field-row { display: flex; gap: .75rem; }
+.field-row .field { flex: 1; }
+.field-narrow { max-width: 90px; flex: none !important; }
+.field-unit { align-self: flex-end; padding-bottom: .45rem; color: var(--text2); font-size: .85rem; }
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  padding-top: .5rem;
+}
+
+.day-picker { display: flex; gap: .35rem; flex-wrap: wrap; }
+.day-btn {
+  padding: .3rem .55rem;
+  border-radius: 6px;
+  font-size: .78rem;
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.day-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }

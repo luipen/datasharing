@@ -1,0 +1,13 @@
+{
+  "name": "office-chore-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

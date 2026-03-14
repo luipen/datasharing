@@ -1,0 +1,44 @@
+.members-panel { display: flex; flex-direction: column; gap: 1.25rem; max-width: 560px; }
+.panel-title { font-size: 1.1rem; font-weight: 700; }
+
+.member-list { padding: .5rem; }
+.empty-msg { color: var(--text2); font-size: .875rem; padding: .75rem; }
+
+.member-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem .75rem;
+  border-radius: 6px;
+}
+.member-row:hover { background: var(--bg3); }
+
+.member-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.member-name { flex: 1; font-weight: 500; }
+
+.add-member-form { padding: 1.25rem; }
+.add-member-form h3 { font-size: .9rem; font-weight: 700; margin-bottom: .9rem; }
+
+.add-form { display: flex; flex-direction: column; gap: .75rem; }
+
+.color-pick { display: flex; flex-direction: column; gap: .3rem; }
+.color-swatches { display: flex; gap: .4rem; flex-wrap: wrap; }
+.swatch {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 0;
+  flex-shrink: 0;
+}
+.swatch.selected { border-color: var(--text); }
+
+.add-actions { display: flex; align-items: center; justify-content: flex-end; gap: .75rem; }
+.err-msg { color: var(--danger); font-size: .8rem; }
